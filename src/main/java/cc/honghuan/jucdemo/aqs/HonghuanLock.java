@@ -11,7 +11,7 @@ public class HonghuanLock {
     private static class Sync extends AbstractQueuedSynchronizer {
         @Override
         protected boolean tryAcquire(int arg) {
-            return  compareAndSetState(0, 1);
+            return compareAndSetState(0, 1);
         }
 
         @Override
@@ -22,16 +22,17 @@ public class HonghuanLock {
 
         @Override
         protected boolean isHeldExclusively() {
-            return getState()==1;
+            return getState() == 1;
         }
     }
 
     private Sync sync = new Sync();
 
-    public void lock () {
+    public void lock() {
         sync.acquire(1);
     }
-    public void unlock () {
+
+    public void unlock() {
         sync.release(1);
     }
 }

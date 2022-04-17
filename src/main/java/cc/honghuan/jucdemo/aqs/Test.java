@@ -1,6 +1,7 @@
 package cc.honghuan.jucdemo.aqs;
 
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author honghuan.Liu
@@ -9,7 +10,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Test {
 
     static AtomicInteger count = new AtomicInteger(0);
-    static HonghuanLock lock = new HonghuanLock();
+    // static HonghuanLock lock = new HonghuanLock();
+    static ReentrantLock lock = new ReentrantLock();
 
     public static void main(String[] args) {
 
