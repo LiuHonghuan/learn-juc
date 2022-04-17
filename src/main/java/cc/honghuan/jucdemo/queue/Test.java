@@ -38,7 +38,7 @@ public class Test {
                 try {
                     queue.put(offset);
                     System.out.println("线程(" + Thread.currentThread().getName() + ")向队列插入一个元素" + offset + "，队列剩余空间：" + (queueSize - queue.size()));
-                     Thread.sleep(1000);
+                  //   Thread.sleep(1000);
                     offset++;
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -61,9 +61,10 @@ public class Test {
 
         private void doConsumer() throws Exception {
             for (; ; ) {
+                Thread.sleep(2000);
                 Integer offset = queue.take();
                 System.out.println("线程(" + Thread.currentThread().getName() + ")消费了:" + offset + ", 队列剩余空间：" + (queueSize - queue.size()) + "个");
-                Thread.sleep(1000);
+
             }
         }
     }
