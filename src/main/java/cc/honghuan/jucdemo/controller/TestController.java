@@ -17,6 +17,14 @@ public class TestController {
 
 
 
+
+    @GetMapping("/test3")
+    public void test3() throws Exception {
+
+        System.out.println("cxzcxz");
+    }
+
+
     @GetMapping("/test2")
     public void test2() throws Exception {
         Future<String> submit = threadPool1.submit(() -> {
