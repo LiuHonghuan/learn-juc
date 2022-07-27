@@ -1,4 +1,4 @@
-package cc.honghuan.jucdemo.netty;
+package cc.honghuan.jucdemo.io;
 
 import java.io.IOException;
 import java.io.InputStream;
